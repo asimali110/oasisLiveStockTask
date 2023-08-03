@@ -13,6 +13,7 @@
 		BB7165C82A7C3E4900CF09D6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB7165C62A7C3E4900CF09D6 /* Main.storyboard */; };
 		BB7165CA2A7C3E4E00CF09D6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BB7165C92A7C3E4E00CF09D6 /* Assets.xcassets */; };
 		BB7165CD2A7C3E4E00CF09D6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB7165CB2A7C3E4E00CF09D6 /* LaunchScreen.storyboard */; };
+		BB7165D62A7C3E8A00CF09D6 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB7165D52A7C3E8900CF09D6 /* CoreMotion.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		BB7165C92A7C3E4E00CF09D6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BB7165CC2A7C3E4E00CF09D6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BB7165CE2A7C3E4E00CF09D6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BB7165D52A7C3E8900CF09D6 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +33,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BB7165D62A7C3E8A00CF09D6 /* CoreMotion.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +45,7 @@
 			children = (
 				BB7165BF2A7C3E4900CF09D6 /* oasislivestockTask */,
 				BB7165BE2A7C3E4900CF09D6 /* Products */,
+				BB7165D42A7C3E8800CF09D6 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -65,6 +69,14 @@
 				BB7165CE2A7C3E4E00CF09D6 /* Info.plist */,
 			);
 			path = oasislivestockTask;
+			sourceTree = "<group>";
+		};
+		BB7165D42A7C3E8800CF09D6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BB7165D52A7C3E8900CF09D6 /* CoreMotion.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -292,8 +304,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -319,8 +330,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

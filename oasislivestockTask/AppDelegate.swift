@@ -6,17 +6,36 @@
 //
 
 import UIKit
+import CoreMotion
+import UserNotifications
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        let activityManager = CMMotionActivityManager()
+        let pedometer = CMPedometer()
+
+        if CMMotionActivityManager.isActivityAvailable() {
+            activityManager.startActivityUpdates(to: .main) { (activity: CMMotionActivity?) in
+                // Handle activity data if needed
+            }
+        }
+
+        if CMPedometer.isStepCountingAvailable() {
+            pedometer.queryPedometerData(from: Date(), to: Date()) { (data: CMPedometerData?, error: Error?) in
+                // Handle pedometer data if needed
+            }
+        }
+
+        UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound]) { (granted, error) in
+                if let error = error {
+                    print("Error requesting notification permission: \(error.localizedDescription)")
+                }
+        }
+        
         return true
     }
-
     // MARK: UISceneSession Lifecycle
 
     func application(_ application: UIApplication, configurationForConnecting connectingSceneSession: UISceneSession, options: UIScene.ConnectionOptions) -> UISceneConfiguration {
